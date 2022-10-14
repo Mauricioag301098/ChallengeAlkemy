@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-sm">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink=""> <img src="../../../assets/alacarta.svg" width="40px" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link" routerLinkActive="active" routerLink="buscador">Buscar Plato</a>
+            </div>
+            <div *ngIf="auth.currentUser" class="dropdown">
+                <span class="dropdown-toggle user" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    {{auth.currentUser}}
+                </span>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item.acumulado" style="color: var(--dark-blue);" (click)="cerrarSesion()">Cerrar sesion</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</nav>

@@ -1,0 +1,20 @@
+<div class="container d-flex justify-content-center">
+
+    <div class="col col-sm-10 col-md-8 col-lg-6">
+
+        <div class="card text-left">
+            <img class="card-img-top" src={{plato?.image}} alt="">
+            <div class="card-body">
+                <h4 class="card-title">{{plato?.title}}</h4>
+                <div class="card-text">
+                    <div> Precio: {{plato?.pricePerServing | currency}}</div>
+                    <div> Tiempo de preparacion: {{plato?.readyInMinutes  | number}}</div>
+                    <div> Health Score: {{plato?.healthScore  | number}}</div>
+                    <div> Vegano: {{plato?.vegan | yesNo}}</div>
+                    <div> Vegetariano: {{plato?.vegetarian | yesNo}}</div>
+                </div>
+            </div>
+        </div> 
+
+    </div>
+</div>
